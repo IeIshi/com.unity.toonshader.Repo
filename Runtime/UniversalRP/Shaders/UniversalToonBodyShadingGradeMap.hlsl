@@ -184,8 +184,10 @@ float shadowAttenuation = 1.0;
         float4 _BlendTex_var = SAMPLE_TEXTURE2D(_BlendTex, sampler_MainTex, TRANSFORM_TEX(Set_UV0, _MainTex));
         float4 _BlendMap_var = SAMPLE_TEXTURE2D(_BlendMap, sampler_MainTex, TRANSFORM_TEX(Set_UV0, _MainTex));
 
-        Set_FinalBaseColor = lerp(Set_FinalBaseColor, _BlendTex_var.rgb, _BlendMap_var.a * _BlendLevel);
-        // Set_BaseColor = lerp(_MainTex_var.rgb, _BlendTex_var.rgb, _BlendMap_var.a * _BlendLevel * 10);
+        Set_FinalBaseColor = lerp(Set_FinalBaseColor, _BlendTex_var.rgb, _BlendMap_var.r * _BlendMap_var.a * _BlendLevel_R);
+        Set_FinalBaseColor = lerp(Set_FinalBaseColor, _BlendTex_var.rgb, _BlendMap_var.g * _BlendMap_var.a * _BlendLevel_G);
+        Set_FinalBaseColor = lerp(Set_FinalBaseColor, _BlendTex_var.rgb, _BlendMap_var.b * _BlendMap_var.a * _BlendLevel_B);
+        
 
         float4 _Set_HighColorMask_var = tex2D(_Set_HighColorMask, TRANSFORM_TEX(Set_UV0, _Set_HighColorMask));
 

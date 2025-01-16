@@ -1,9 +1,9 @@
 {
   "name": "com.unity.toonshader",
-  "displayName": "Unity Toon Shader",
-  "version": "0.11.0-preview",
+  "displayName": "Unity Toon Shader Extended",
+  "version": "v0.1 Basis: 0.11.0-preview",
   "unity": "2021.3",
-  "description": "Unity Toon Shader (Unity-Chan Toon Shader 3) is a toon shader for images and video that is designed to meet the needs of creators working on cel-shaded 3DCG animations.\nUnlike other pre-render toon shaders, all features can be adjusted in real time on Unity, which is the greatest feature of UTS.\n\nUTS has great power and makes a wide variety of character designs possible, from cel-shaded to light novel illustration styles.\n\nUTS has the 3 basic layers of Base Color, 1st Shade Color, and 2nd Shade Color, colors and textures can also accept a wide variety of customization options, such as High Color, Rim Light, MatCap (sphere mapping), and Emissive (light emission).The level of gradation (feather) between colors can also be adjusted in Unity in real-time.\n\nMore precisely, View documentation above.",
+  "description": "Extended Unity Toon Shader (Unity-Chan Toon Shader 3) is a toon shader for images and video that is designed to meet the needs of creators working on cel-shaded 3DCG animations.\nUnlike other pre-render toon shaders, all features can be adjusted in real time on Unity, which is the greatest feature of UTS.\n\nUTS has great power and makes a wide variety of character designs possible, from cel-shaded to light novel illustration styles.\n\nUTS has the 3 basic layers of Base Color, 1st Shade Color, and 2nd Shade Color, colors and textures can also accept a wide variety of customization options, such as High Color, Rim Light, MatCap (sphere mapping), and Emissive (light emission).The level of gradation (feather) between colors can also be adjusted in Unity in real-time.\n\nMore precisely, View documentation above.",
   "dependencies": {
     "com.unity.film-internal-utilities": "0.19.2-preview",
     "com.unity.render-pipelines.core": "10.0.0"
@@ -26,7 +26,7 @@
     }
   ],
   "_upm": {
-    "changelog": "### Changed:\n* api: change the accessor of internal test classes to internal\n* api: change the accessor of UTS3MaterialHeaderScope to internal\n* api: change the accessor of UTS3MaterialHeaderScopeList to internal\n* api: change the accessor of UTS3MaterialEditorExtension and MaterialEditorExtension to internal\n* docs: update Unity Editor Compatibility\n* deps:  use com.unity.film-internal-utilities@0.19.2-preview\n\n### Removed:\n* api: remove unused empty UniversalToonShaderInfo class"
+    "changelog": "### Changed:\n* add option for blend textur and blend map for rbg channels\n* api: change the accessor of internal test classes to internal\n* api: change the accessor of UTS3MaterialHeaderScope to internal\n* api: change the accessor of UTS3MaterialHeaderScopeList to internal\n* api: change the accessor of UTS3MaterialEditorExtension and MaterialEditorExtension to internal\n* docs: update Unity Editor Compatibility\n* deps:  use com.unity.film-internal-utilities@0.19.2-preview\n\n### Removed:\n* api: remove unused empty UniversalToonShaderInfo class"
   },
   "upmCi": {
     "footprint": "423f359103f0802eb40308f82eeaed63b51c1048"

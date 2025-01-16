@@ -713,9 +713,15 @@ namespace UnityEditor.Rendering.Toon
                 propName: "_Clipping_Level", defaultValue: 0.0f, min: 0.0f, max: 1.0f);
 
             // ieishi
-            public static readonly RangeProperty blendlevel = new RangeProperty(
-                label: "Blend Level", tooltip: "Specifies the strength of the clipping mask.",
-                propName: "_BlendLevel", defaultValue: 0.0f, min: 0.0f, max: 1.0f);
+            public static readonly RangeProperty blendlevel_R = new RangeProperty(
+                label: "Blend Level R", tooltip: "Visibilty of blend textur from blend map red channel",
+                propName: "_BlendLevel_R", defaultValue: 0.0f, min: 0.0f, max: 1.0f);
+            public static readonly RangeProperty blendlevel_G = new RangeProperty(
+                label: "Blend Level G", tooltip: "Visibilty of blend textur from blend map green channel",
+                propName: "_BlendLevel_G", defaultValue: 0.0f, min: 0.0f, max: 1.0f);
+            public static readonly RangeProperty blendlevel_B = new RangeProperty(
+                label: "Blend Level B", tooltip: "Visibilty of blend textur from blend map blue channel",
+                propName: "_BlendLevel_B", defaultValue: 0.0f, min: 0.0f, max: 1.0f);
 
             public static readonly RangeProperty scrollEmissiveUText = new RangeProperty(
                 label: "Scroll U/X direction", tooltip: "Specifies how much the Emissive texture should scroll in the u-direction (x-axis direction) when updating the animation. The scrolling animation is ultimately determined by Base Speed (Time) x Scroll U Direction x Scroll V Direction.",
@@ -1437,14 +1443,16 @@ namespace UnityEditor.Rendering.Toon
 
             // ieishi
             EditorGUILayout.Space();
-            
+
             GUIContent BlendTexText = new GUIContent("Blend Tex", "");
             m_MaterialEditor.TexturePropertySingleLine(BlendTexText, blendTex);
 
             GUIContent BlendMapText = new GUIContent("Blend Map", "");
             m_MaterialEditor.TexturePropertySingleLine(BlendMapText, blendMap);
 
-            GUI_RangeProperty(material, Styles.blendlevel);
+            GUI_RangeProperty(material, Styles.blendlevel_R);
+            GUI_RangeProperty(material, Styles.blendlevel_G);
+            GUI_RangeProperty(material, Styles.blendlevel_B);
 
 
             EditorGUILayout.Space();

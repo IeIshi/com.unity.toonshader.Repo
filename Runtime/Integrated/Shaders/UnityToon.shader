@@ -68,7 +68,9 @@ Shader "Toon" {
         // ieishi
         _BlendTex ("BlendTex", 2D) = "white" {}
         _BlendMap ("BlendMap", 2D) = "white" {}
-        _BlendLevel("BlendLevel", Range(0, 1)) = 0
+        _BlendLevel_R("BlendLevel_R", Range(0, 1)) = 0
+        _BlendLevel_G("BlendLevel_G", Range(0, 1)) = 0
+        _BlendLevel_B("BlendLevel_B", Range(0, 1)) = 0
 
 
         _NormalMap ("NormalMap", 2D) = "bump" {}

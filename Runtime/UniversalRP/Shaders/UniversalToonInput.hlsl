@@ -200,7 +200,9 @@ TEXTURE2D(_NormalMap);
 //ieishi
 TEXTURE2D(_BlendTex);
 TEXTURE2D(_BlendMap);
-half _BlendLevel;
+half _BlendLevel_R;
+half _BlendLevel_G;
+half _BlendLevel_B;
 
 
 sampler2D _Set_1st_ShadePosition; 

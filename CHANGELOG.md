@@ -1,5 +1,8 @@
 # Changelog
 
+## [v0.1 - Basis v11 RC] - 2025-01-15
+* add option for blend textur and blend map for rbg channels
+
 ## [0.11.0-preview] - 2024-12-11
 
 ### Changed:
